@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>................</title>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Cadastro</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="bg">
+  <!-- MOBILE FIRST -->  
+  <nav class="navbar navbar-expand-md">
+      <a class="navbar-brand" href="../index.html">BubbleBee</a>
+      <button class="navbar-toggler nav_btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars icon_menu"></i>
+      </button>
+      <div class="collapse navbar-collapse nav_menu navbar-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="duvidas.html"><i class="icon_menu fas fa-bookmark"></i>Dúvidas Frequentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html"><i class="icon_menu fas fa-question-circle"></i>Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="chatbot.html"><i class="icon_menu fas fa-play"></i>Começar BubbleBee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cadastro.html"><i class="icon_menu fas fa-id-card"></i>Cadastrar</a>
+          </li>
+        </ul>
+      </div>
+    </nav>    
+  <div class="clear"></div>
+
+  <!-- DESTAQUE CONTEUDO -->
     <section id="cad">
       <form>
         <h1>Cadastro</h1>
@@ -27,5 +68,25 @@
         <button>Cadastrar</button>
       </form>
     </section>
-  </body>
+
+  <!-- RODAPE -->
+  <footer class="rodape">
+    <p class="footer_copy">“A tecnologia move o mundo.” - Steve Jobs</p>
+    <p class="footer_copy">Beehive - &copy; Todos os direitos reservados</p>
+  </footer>
+  <!-- /.RODAPE -->
+
+  <!-- Bootstrap -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../css/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>
