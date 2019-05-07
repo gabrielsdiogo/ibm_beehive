@@ -1,9 +1,34 @@
+@font-face {
+  font-family: 'Century Gothic Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Century Gothic Regular'), url('../css/fonts/GOTHIC.woff') format('woff');
+}
+@font-face {
+  font-family: 'Century Gothic Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Century Gothic Italic'), url('../css/fonts/GOTHICI.woff') format('woff');
+}
+@font-face {
+  font-family: 'Century Gothic Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Century Gothic Bold'), url('../css/fonts/GOTHICB.woff') format('woff');
+}
+@font-face {
+  font-family: 'Century Gothic Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Century Gothic Bold Italic'), url('../css/fonts/GOTHICBI.woff') format('woff');
+}
+
 * {
   box-sizing: border-box;
 }
-
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Century Gothic", sans-serif;
+  background-color: #fff;
 }
 /* MUDANDO CORES PARA SELEÇÃO DE TEXTO */
 ::selection {
@@ -51,25 +76,25 @@ body {
 .navbar-brand:active {
   outline: 0;
 }
-.nav_menu {
+.nav-menu {
   color: #fff !important;
 }
 .navbar-brand {
   color: #f5a128 !important;
 }
-.icon_menu {
+.icon-menu {
   color: #fff;
 }
-#menu_nav {
+/* #menu_nav {
   display: none;
-}
-.navbar-toggler {
+} */
+/* .navbar-toggler {
   position: relative;
   float: left;
   /* right: 20px;
   top: 20px; */
-}
-.nav_btn:hover {
+
+.nav-btn:hover {
   cursor: pointer !important;
 }
 .nav-item {
@@ -77,7 +102,7 @@ body {
   padding-bottom: 5px;
   border-bottom: 1px solid #f5a128;
 }
-.icon_menu {
+.icon-menu {
   color: #f5a128;
   padding-right: 8px;
 }
@@ -92,17 +117,16 @@ body {
 .rodape {
   width: 100%;
   background-color: #222222;
-  height: 70px;
-  position: relative;
+  height: 60px;
+  position: fixed;
   bottom: 0;
-  left: 0;
 }
 .rodapehome {
   width: 100%;
   background-color: #222222;
-  height: 70px;
+  height: 60px;
+  position: relative;
   bottom: 0;
-  left: 0;
 }
 .footer_copy {
   text-align: center;
@@ -197,6 +221,8 @@ body {
   padding: 0 10px;
 }
 
+/* PAGINA SOBRE */
+
 /* MENU PRINCIPAL */
 .menu {
   width: 90%;
@@ -207,22 +233,39 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+.title {
+  text-align: center;
+  margin: 25px 0;
+  font-style: italic;
+  color: #f5a128;
+}
 .menu_item {
   width: 324px;
   margin: 10px;
   padding: 10px;
   text-align: center;
-  border: 2px solid #f5a128;
+  border: 1px solid #f5a128;
   border-radius: 5px;
   box-shadow: 1px 1px 3px 0px #f5a128;
   transition: transform 0.5s;
 }
-.menu_item:hover {
-  transform: scale(1.03);
-  cursor: pointer;
+.menu_item h4 {
+  font-weight: 600;
+}
+.menu_item_sobre a {
+  color: #222222;
+}
+.menu_item_sobre h3 {
+  color: #222;
+}
+.menu_item_sobre:hover h3{
+  color: rgb(0, 115, 176);
+}
+.menu_item_sobre i {
+  color: rgb(0, 115, 176) !important;
 }
 .menu_item i {
-  margin-right: 8px;
+  margin-right: 13px;
   color: #2a2a2a;
 }
 .menu_item p {
@@ -230,45 +273,289 @@ body {
   color: #222222;
 }
 
+/* PAGINA SOBRE */
+.menu_sobre {
+  width: 90%;
+  height: auto;
+  border: 1px solid #000;
+  margin: auto 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.menu_sobre .menu_item {
+  width: 350px;
+  padding: 30px 20px;
+}
+.menu_sobre a {
+  text-decoration: none;
+}
+
+/* INICIO CHATBOT PAGINA */
+.menu_item_chat {
+  width: 324px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.5s;
+}
+.enabled_chat {
+  box-shadow: 1px 1px 5px 0px #bbb;
+  border: 2px solid #bbb;
+  color: #EDAE56;
+  transition: transform .2s, border .2s, font-size .2s;
+}
+.enabled_chat:hover {
+  box-shadow: 1px 1px 5px 0px #EDAE56;
+  border: 2px solid #EDAE56;
+  cursor: pointer;
+  font-size: 1em;
+  transform: scale(1.02);
+}
+.enabled_chat p {
+  color: #bbb;
+}
+.enabled_chat i{
+  margin-right: 13px;
+  color: #FFB230;
+}
+.disabled_chat {
+  box-shadow: 1px 1px 3px 0px #bbb;
+  border: 2px solid #bbb;
+  color: #F8BFBC;
+  transition: transform .2s, border .2s, font-size .2s;
+}
+.disabled_chat:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 0px #F8BFBC;
+  border: 2px solid #F8BFBC;
+  font-size: 1.2em;
+  transform: scale(1.02);
+}
+.disabled_chat p {
+  color: #bbb;
+}
+.disabled_chat i{
+  margin-right: 13px;
+  color: #F8836C;
+}
+#conteudo_chatbot {
+  width: 90%;
+  margin: 20px 5%;
+  border: 1px solid #222;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#conteudo-robo-destaque {
+  max-width: 100%;
+  width: 50%;
+  padding: 20px;
+  height: auto;
+  margin: 5px 1%;
+  border: 1px solid #222;
+}
+#conteudo-robo-destaque p{
+  text-align: center;
+  color: #666;
+}
+#chatbot-img{
+  max-width: 80%;
+  height: 350px;
+  margin: 5px 0 0 1%;
+  border: 1px solid #222;
+}
+.title_chatbot {
+  text-align: center;
+  margin: 40px 0;
+}
+.btn-chatbot {
+  margin: 30px 0;
+  display: block;
+  background-origin: unset;
+}
+.title_sobre {
+  margin: 20px 0;
+  text-align: center;
+}
+/* FINAL CHATBOT PAGINA */
+
+/* INICIO CADASTRO */
+#form-cadastro {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 40px;
+  margin: 40px 5%;
+}
+#form-cadastro .question label,
+#form-cadastro .question input {
+  -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+
+#form-cadastro button:hover,
+#form-cadastro button:focus {
+  color: #222222;
+  font-weight: 700;
+  border: 1px solid #f5a128;
+  background-color: #f5a128;
+}
+#form-cadastro .question {
+  padding: 15px 0;
+}
+#form-cadastro .question label {
+  transform-origin: left center;
+  padding: 10px 15px;
+  position: absolute;
+  margin-top: -40px;  
+}
+#form-cadastro .question input {
+  background-color: none;
+  border: 2px solid #ccc;
+  line-height: 0;
+  font-size: 17px;
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color: #f5a128;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+}
+#form-cadastro .question input:focus {
+  outline: none;
+  border: 2px solid #444;
+  color: #444;
+  margin-top: 10px;
+}
+#form-cadastro .question input:valid {
+  margin-top: 15px;
+}
+#form-cadastro .question input:focus ~ label {
+  -moz-transform: translate(0, -45px);
+  -ms-transform: translate(0, -45px);
+  -webkit-transform: translate(0, -45px);
+  transform: translate(0, -45px);
+  font-size: 1.1em;
+}
+#form-cadastro .question input:valid ~ label {
+  text-transform: uppercase;
+  font-style: italic;
+  -moz-transform: translate(5px, -35px) scale(0.6);
+  -ms-transform: translate(5px, -35px) scale(0.6);
+  -webkit-transform: translate(5px, -35px) scale(0.6);
+  transform: translate(5px, -35px) scale(0.6);
+}
+#form-cadastro .question input ~ label {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: 400;
+  color: #222;
+  -moz-transform: translate(5px, -40px) scale(0.6);
+  -ms-transform: translate(5px, -40px) scale(0.6);
+  -webkit-transform: translate(5px, -40px) scale(0.6);
+  transform: translate(5px, -40px) scale(0.6);
+}
+#form-cadastro button {
+  display: block;
+  padding: 10px 20px;
+  margin: 35px auto;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 60px;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+/* FIM CADASTRO */
+
+/* FAQ DÚVIDAS*/
+.tab {
+  position: relative;
+  margin-bottom: 5px;
+  width: 100%;
+  color: #f5a128;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+}
+.tab a:hover {
+  color: #c4842a;
+}
+.card {
+  position: relative;
+  width: 95%;
+  border: 2px dashed #f5a128;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+.tab label {
+  display: block;
+  padding: 0 0 0 1em;
+  background: #222222;
+  line-height: 3;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.blue label {
+  background: #2980b9;
+}
+.tab-content {
+  max-height: 0;
+  color: #222;
+  overflow: hidden;
+  background: #f5a028a4;
+  -webkit-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+}
+.tab-content a{
+  text-decoration: underline;
+  color: #222222;
+}
+.tab-content p {
+  margin: 1em;
+}
+.tab input:checked ~ .tab-content {
+  transition: 3s;
+  max-height: 100vh;
+}
+.tab label::after {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  font-weight: bold;
+  width: 2em;
+  height: 3em;
+}
 /* MEDIA QUERIES */
 /* DISPLAYS SCREENS */
-@media only screen and (max-width: 300px) {
-  form {
-    position: relative;
-    display: inline-block;
-    max-width: 95%;
-    min-width: 90%;
-    box-sizing: border-box;
-    padding: 30px 25px;
-    background-color: white;
-    border-radius: 40px;
-    margin-top: 40px;
-    left: 50%;
+
+@media only screen and (min-width: 300px) {
+  #form-cadastro {
+    margin: 40px auto;
+    /* left: 50%;
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  form button {
-    margin-top: 35px;
-    background-color: #ff4a56;
-    border: 1px solid #ff4a56;
-    line-height: 0;
-    font-size: 17px;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 20px 15px;
-    border-radius: 60px;
-    color: #fff;
-    font-weight: 100;
-    letter-spacing: 0.01em;
-    position: relative;
-    margin-left: 26%;
+    transform: translate(-50%, 0); */
   }
 }
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 764px) {
   .menu_item {
     width: 250px;
   }
@@ -293,8 +580,14 @@ body {
     background-color: #f5a128;
     text-decoration: none;
   }
-  .nav-link:hover .icon_menu {
+  .nav-link:hover .icon-menu {
     color: #222222;
+  }
+  #form-cadastro button {
+    margin: 20px 45%;
+  }
+  #form-cadastro .question input ~ label {
+    font-size: 1.4em;
   }
 }
 @media only screen and (min-width: 780px) {
@@ -321,13 +614,16 @@ body {
     margin-right: 10px;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 998px) {
   .menu_item {
     width: 338px;
   }
   .footer_copy {
     font-size: 0.9em;
     line-height: 22px;
+  }
+  .rodape {
+    position: fixed;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -347,284 +643,12 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-}
-/* @media (min-width: 800px) {
-  .navbar-toggler {
-    display: none;
-  }
-} */
-
-/* CADASTRO */
-fieldset {
-  border: none;
-}
-
-@media only screen and (max-width: 1920px) {
-  form {
-    position: relative;
-    display: inline-block;
-    max-width: 70%;
-    min-width: 50%;
-    box-sizing: border-box;
-    padding: 30px 25px;
-    background-color: white;
-    border-radius: 40px;
-    margin-top: 40px;
-    left: 50%;
-    -moz-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  form button {
-    margin-top: 35px;
-    background-color: #222222;
-    border: 2px solid #f5a128;
-    line-height: 0;
-    font-size: 17px;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 20px 15px;
-    border-radius: 60px;
-    color: #f5a128;
-    font-weight: 100;
-    letter-spacing: 0.01em;
-    position: relative;
-    margin-left: 41%;
+  .rodapehome {
+    position: fixed;
   }
 }
-
-.bg {
-  background-color: #1f1515de;
-  font-family: Helvetica, sans-serif;
-  font-weight: light;
-  -webkit-font-smoothing: antialiased;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.transition,
-form button,
-form .question label,
-form .question input {
-  -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-  -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-  -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-  transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-}
-
-/* form {
-  position: relative;
-  display: inline-block;
-  max-width: 95%;
-  min-width: 90%;
-  box-sizing: border-box;
-  padding: 30px 25px;
-  background-color: white;
-  border-radius: 40px;
-  margin-top: 40px;
-  left: 50%;
-  -moz-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  margin-left: auto;
-  margin-right: auto;
-} */
-form h1 {
-  color: #f5a128;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  margin-left: 15px;
-  margin-bottom: 35px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-form button:hover,
-form button:focus {
-  color: #000000;
-  background-color: #f5a128;
-}
-form .question {
-  position: relative;
-  padding: 10px 0;
-}
-form .question:first-of-type {
-  padding-top: 0;
-}
-form .question:last-of-type {
-  padding-bottom: 0;
-}
-form .question label {
-  transform-origin: left center;
-  color: #f5a128;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  font-size: 17px;
-  box-sizing: border-box;
-  padding: 10px 15px;
-  display: block;
-  position: absolute;
-  margin-top: -40px;
-  z-index: 2;
-  pointer-events: none;
-}
-form .question input {
-  appearance: none;
-  background-color: none;
-  border: 2px solid #f5a128;
-  line-height: 0;
-  font-size: 17px;
-  width: 100%;
-  display: block;
-  box-sizing: border-box;
-  padding: 10px 15px;
-  border-radius: 60px;
-  color: #f5a128;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  position: relative;
-  z-index: 1;
-}
-form .question input:focus {
-  outline: none;
-  background: #222222;
-  color: #f5a128;
-  margin-top: 30px;
-}
-form .question input:valid {
-  margin-top: 30px;
-}
-form .question input:focus ~ label {
-  -moz-transform: translate(0, -35px);
-  -ms-transform: translate(0, -35px);
-  -webkit-transform: translate(0, -35px);
-  transform: translate(0, -35px);
-}
-form .question input:focus ~ label {
-  -moz-transform: translate(0, -35px);
-  -ms-transform: translate(0, -35px);
-  -webkit-transform: translate(0, -35px);
-  transform: translate(0, -35px);
-}
-form .question input:valid ~ label {
-  text-transform: uppercase;
-  font-style: italic;
-  -moz-transform: translate(5px, -35px) scale(0.6);
-  -ms-transform: translate(5px, -35px) scale(0.6);
-  -webkit-transform: translate(5px, -35px) scale(0.6);
-  transform: translate(5px, -35px) scale(0.6);
-}
-form .question input:valid ~ label {
-  text-transform: uppercase;
-  font-style: italic;
-  -moz-transform: translate(5px, -35px) scale(0.6);
-  -ms-transform: translate(5px, -35px) scale(0.6);
-  -webkit-transform: translate(5px, -35px) scale(0.6);
-  transform: translate(5px, -35px) scale(0.6);
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-/* FIM CADASTRO */
-
-/* FAQ */
-.titulo {
-  text-align: center;
-  font-size: 42px;
-  background: -webkit-linear-gradient(#222222, #f5a128);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.tab {
-  position: relative;
-  margin-bottom: 1px;
-  width: 100%;
-  color: #f5a128;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.tab input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-.card {
-  position: relative;
-  display: inline-block;
-  max-width: 95%;
-  min-width: 90%;
-  box-sizing: border-box;
-  padding: 30px 25px;
-  background-color: white;
-  border-radius: 40px;
-
-  left: 50%;
-  -moz-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  margin-left: auto;
-  margin-right: auto;
-}
-.tab label {
-  position: relative;
-  display: block;
-  padding: 0 0 0 1em;
-  background: #222222; /* cor antes do click*/
-  font-weight: bold;
-  line-height: 3;
-  cursor: pointer;
-  margin-bottom: 0;
-}
-.blue label {
-  background: #2980b9;
-}
-.tab-content {
-  max-height: 0;
-  overflow: hidden;
-  background: #2c2c2c; /* cor depois do click */
-  -webkit-transition: max-height 1s;
-  -o-transition: max-height 1s;
-  transition: max-height 1s;
-}
-.blue .tab-content {
-  background: #3498db;
-}
-.tab-content p {
-  margin: 1em;
-}
-/* :checked */
-.tab input:checked ~ .tab-content {
-  transition: 3s;
-  max-height: 100vh;
-}
-/* Icon */
-.tab label::after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  width: 3em;
-  height: 3em;
-  line-height: 3;
-  text-align: center;
-}
-.tab input[type="checkbox"] + label::after {
-  content: "+";
-  font-size: 30px;
-  margin-top: -20px;
-}
-.tab input[type="radio"] + label::after {
-  content: "\25BC";
-}
-.tab input[type="checkbox"]:checked + label::after {
-  transform: rotate(315deg);
-}
-.tab input[type="radio"]:checked + label::after {
-  transform: rotateX(180deg);
+@media only screen and (min-width: 1920px) {
+  .rodapehome {
+    position: fixed;
+  }
 }
