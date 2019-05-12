@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="../images/favi.png" />
 
     <!-- CSS links -->
-    <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <!-- Font Awesome -->
@@ -98,6 +97,46 @@
       </a>
     </section>
 
+    <!-- DESTAQUE CONTEUDO -->
+    <section class="container">
+        <form id="form-cadastro" action="../index.html">
+          <h1 class="title">Deixe sua mensagem</h1>
+          <div class="row">
+            <div class="question question-special col-sm-6">
+              <input type="text" name="senha" required />
+              <label>Nome</label>
+            </div>
+            <div class="question col-sm-6">
+              <input type="text" name="senha" required />
+              <label>Sobrenome</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="question col-lg-12">
+              <input type="email" name="email" placeholder="ex. seuemail@email.com" required />
+              <label>E-mail</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="question col-sm-6">
+              <input type="text" id="tel" name="tel" placeholder="(99)9999-9999" required />
+              <label>Telefone</label>
+            </div>
+            <div class="question col-sm-6">
+              <input type="text" id="cel" name="cel" placeholder="(99)99999-9999" required />
+              <label>Celular</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="question col-md-12">
+              <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite aqui sua mensagem"></textarea>
+              <label>Mensagem</label>
+            </div>  
+          </div>
+          <button>Enviar</button>
+        </form>
+      </section>
+
     <!-- RODAPE -->
     <hr>
     <footer class="footer_main">
@@ -112,6 +151,13 @@
     <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/jquery.mask.js"></script>
-    <script src="../css/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        let tel= $('#tel  ');
+        let cel= $('#cel');
+        tel.mask('(00)0000-0000');
+        cel.mask('(00)00000-0000');
+      })
+      </script>
   </body>
 </html>

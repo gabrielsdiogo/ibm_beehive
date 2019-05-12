@@ -193,6 +193,17 @@ hr {
   margin: auto 5%;
   border: 1px solid #000;
 }
+.conteudo_imagem .row {
+  flex-wrap: wrap-reverse !important;
+  justify-content: center;
+  align-items: center;
+}
+.content-img-destaque {
+  text-align: center;
+}
+.img-chatbot-destaque {
+  height: 350px;
+}
 #conteudo_destaque {
   width: 90%;
   height: auto;
@@ -218,6 +229,10 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.menu .row {
+  justify-content: center;
+  align-items: center;
 }
 .title {
   text-align: center;
@@ -331,7 +346,7 @@ hr {
 }
 #img-chatbot{
   max-width: 100%;
-  height: 350px;
+  height: 400px;
   margin: 5px 0;
   border: 1px solid #222;
   vertical-align: middle;
@@ -339,6 +354,7 @@ hr {
 .destaque_chatbot {
   vertical-align: middle;
   margin: 20px 0;
+  text-align: center;
 }
 .title_chatbot {
   text-align: center;
@@ -360,7 +376,8 @@ hr {
   margin: 40px 5%;
 }
 #form-cadastro .question label,
-#form-cadastro .question input {
+#form-cadastro .question input,
+#form-cadastro .question textarea {
   -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
   -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
   -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
@@ -375,7 +392,7 @@ hr {
   background-color: #f5a128;
 }
 #form-cadastro .question {
-  padding: 15px 0;
+  padding: 15px 5px;
 }
 #form-cadastro .question label {
   transform-origin: left center;
@@ -383,27 +400,40 @@ hr {
   position: absolute;
   margin-top: -40px;  
 }
+#form-cadastro .question textarea {
+  border: 2px solid #ccc;
+  font-size: 17px;
+  width: 100%;
+  display: block;
+  padding: 25px 15px;
+  border-radius: 10px;
+  color: #f5a128;
+  font-weight: 100;
+  outline: none;
+  position: relative;
+}
 #form-cadastro .question input {
-  background-color: none;
   border: 2px solid #ccc;
   line-height: 0;
   font-size: 17px;
   width: 100%;
   display: block;
   padding: 10px 15px;
-  border-radius: 60px;
+  border-radius: 10px;
   color: #f5a128;
   font-weight: 100;
   letter-spacing: 0.01em;
   position: relative;
 }
-#form-cadastro .question input:focus {
+#form-cadastro .question input:focus,
+#form-cadastro .question textarea:focus {
   outline: none;
   border: 2px solid #444;
   color: #444;
   margin-top: 10px;
 }
-#form-cadastro .question input:valid {
+#form-cadastro .question input:valid,
+#form-cadastro .question textarea:valid {
   margin-top: 15px;
 }
 #form-cadastro .question input:focus ~ label {
@@ -413,6 +443,13 @@ hr {
   transform: translate(0, -45px);
   font-size: 1.1em;
 }
+#form-cadastro .question textarea:focus ~ label {
+  -moz-transform: translate(0, -80px);
+  -ms-transform: translate(0, -80px);
+  -webkit-transform: translate(0, -80px);
+  transform: translate(0, -80px);
+  font-size: 1.8em;  
+}
 #form-cadastro .question input:valid ~ label {
   text-transform: uppercase;
   font-style: italic;
@@ -420,6 +457,9 @@ hr {
   -ms-transform: translate(5px, -40px) scale(0.6);
   -webkit-transform: translate(5px, -40px) scale(0.6);
   transform: translate(5px, -40px) scale(0.6);
+}
+#form-cadastro .question textarea:valid ~ label {
+  transform: translate(5px, -180px) scale(0.6);
 }
 #form-cadastro .question input ~ label {
   text-transform: uppercase;
@@ -432,6 +472,18 @@ hr {
   -webkit-transform: translate(5px, -40px) scale(0.6);
   transform: translate(5px, -40px) scale(0.6);
 }
+#form-cadastro .question textarea ~ label {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: 400;
+  color: #222;
+  -moz-transform: translate(5px, -80px) scale(0.6);
+  -ms-transform: translate(5px, -80px) scale(0.6);
+  -webkit-transform: translate(5px, -80px) scale(0.6);
+  transform: translate(5px, -80px) scale(0.6);
+}
+
 #form-cadastro button {
   display: block;
   padding: 10px 20px;
@@ -518,9 +570,6 @@ hr {
   #form-cadastro {
     margin: 40px auto;
   }
-  #img-chatbot{
-    height: 400px;
-  }
 }
 @media only screen and (min-width: 764px) {
   .menu_item {
@@ -583,6 +632,9 @@ hr {
   .btn-home {
     width: 60%;
     margin: auto 20%;
+  }
+  #img-chatbot{
+    height: 400px;
   }
 }
 @media only screen and (min-width: 998px) {

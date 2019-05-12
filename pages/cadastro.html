@@ -66,7 +66,7 @@
     <!-- DESTAQUE CONTEUDO -->
     <section id="cad">
       <form id="form-cadastro" action="../index.html">
-        <h1 class="title">Cadastro</h1>
+        <h1 class="title">Cadastro - Informações Pessoais</h1>
         <div class="question">
           <input type="email" name="email" placeholder="ex. seuemail@email.com" required />
           <label>E-mail</label>
@@ -110,8 +110,8 @@
     $(document).ready(function(){
       let cpf= $('#cpf');
       let data_nasc= $('#data_nasc');
-      cpf.mask('000.000.000-00', {reverse: true});
-      data_nasc.mask('00/00/0000', {reverse: true});
+      cpf.mask('000.000.000-00');
+      data_nasc.mask('00/00/0000');
     })
     </script>
   </body>

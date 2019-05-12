@@ -57,21 +57,24 @@
     <div class="clear"></div>
     <!-- DESTAQUE CONTEUDO -->
     <main>
-      <div id="conteudo">
-        <div class="conteudo_imagem">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <img src="images/logo/beehiveV2-sombra.png" alt="[Assistente Virtual BubbleBee]" title="Assistente Virtual BubbleBee">
-              </div>
-              <div class="destaque_bee col-lg-6 text-center">
-                <p class="conteudo_frase">Olá, sou <span id="conteudo_special">BubbleBee!</span></p>
-                <p class="conteudo_frase_bee">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi voluptatem eos ullam ab praesentium omnis consectetur enim perferendis ipsam itaque. Sint ea hic eaque minus veniam quisquam nisi, iste repellendus.</p>
-                <a class="btn-main-amarelo" href="pages/chatbot.html"><i class="icon_menu_item fas fa-play"></i>Experimente agora!</a>
+      <!-- <div id="conteudo"> -->
+        <!-- <div class="conteudo_imagem"> -->
+          <article class="conteudo_imagem">
+            <div class="container-fluid content-img-destaque">
+              <div class="row">
+                <div class="col-md-6">
+                  <img id="img-chatbot" src="images/logo/beehiveV2-sombra.png" alt="[Assistente Virtual BubbleBee]" title="Assistente Virtual BubbleBee">
+                </div>
+                <div class="destaque_bee col-md-6">
+                  <p class="conteudo_frase">Olá, sou <span id="conteudo_special">BubbleBee!</span></p>
+                  <p class="conteudo_frase_bee">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi voluptatem eos ullam ab praesentium omnis consectetur enim perferendis ipsam itaque. Sint ea hic eaque minus veniam quisquam nisi, iste repellendus.</p>
+                  <a class="btn-main-amarelo" href="pages/chatbot.html"><i class="icon_menu_item fas fa-play"></i>Experimente agora!</a>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
+          <!-- </div> -->
+        <!-- </div> -->
         <article>
           <div id="conteudo_destaque">
             <h2>Conhecimento em suas mãos!</h2>
@@ -85,6 +88,7 @@
         </article>
 
         <section class="menu">
+          <div class="row">
           <article class="menu_item">
             <h4><i class="fas fa-comments"></i>Comunicação</h4>
             <p>
@@ -103,6 +107,8 @@
               placeat ipsa impedit?
             </p>
           </article>
+        </div>
+        <div class="row">
           <article class="menu_item">
             <h4><i class="fas fa-book"></i>Conhecimento</h4>
             <p>
@@ -121,6 +127,7 @@
               placeat ipsa impedit?
             </p>
           </article>
+        </div>
         </section>
         <div class="conteudo-robo">
           <a class="btn-main-amarelo btn-home" href="pages/chatbot.html"><i class="icon_menu_item fas fa-play"></i>Experimente agora!</a>
@@ -141,6 +148,5 @@
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
-    <script src="css/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
