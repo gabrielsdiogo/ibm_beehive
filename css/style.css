@@ -1,26 +1,30 @@
 @font-face {
-  font-family: 'Century Gothic Regular';
+  font-family: "Century Gothic Regular";
   font-style: normal;
   font-weight: normal;
-  src: local('Century Gothic Regular'), url('../css/fonts/GOTHIC.woff') format('woff');
+  src: local("Century Gothic Regular"),
+    url("../css/fonts/GOTHIC.woff") format("woff");
 }
 @font-face {
-  font-family: 'Century Gothic Italic';
+  font-family: "Century Gothic Italic";
   font-style: normal;
   font-weight: normal;
-  src: local('Century Gothic Italic'), url('../css/fonts/GOTHICI.woff') format('woff');
+  src: local("Century Gothic Italic"),
+    url("../css/fonts/GOTHICI.woff") format("woff");
 }
 @font-face {
-  font-family: 'Century Gothic Bold';
+  font-family: "Century Gothic Bold";
   font-style: normal;
   font-weight: normal;
-  src: local('Century Gothic Bold'), url('../css/fonts/GOTHICB.woff') format('woff');
+  src: local("Century Gothic Bold"),
+    url("../css/fonts/GOTHICB.woff") format("woff");
 }
 @font-face {
-  font-family: 'Century Gothic Bold Italic';
+  font-family: "Century Gothic Bold Italic";
   font-style: normal;
   font-weight: normal;
-  src: local('Century Gothic Bold Italic'), url('../css/fonts/GOTHICBI.woff') format('woff');
+  src: local("Century Gothic Bold Italic"),
+    url("../css/fonts/GOTHICBI.woff") format("woff");
 }
 
 * {
@@ -259,7 +263,7 @@ hr {
 .menu_item_sobre h3 {
   color: #222;
 }
-.menu_item_sobre:hover h3{
+.menu_item_sobre:hover h3 {
   color: rgb(0, 115, 176);
 }
 .menu_item_sobre i {
@@ -304,12 +308,12 @@ hr {
 .enabled_chat {
   box-shadow: 1px 1px 5px 0px #bbb;
   border: 2px solid #bbb;
-  color: #EDAE56;
-  transition: transform .2s, border .2s, font-size .2s;
+  color: #edae56;
+  transition: transform 0.2s, border 0.2s, font-size 0.2s;
 }
 .enabled_chat:hover {
-  box-shadow: 1px 1px 5px 0px #EDAE56;
-  border: 2px solid #EDAE56;
+  box-shadow: 1px 1px 5px 0px #edae56;
+  border: 2px solid #edae56;
   cursor: pointer;
   font-size: 1em;
   transform: scale(1.02);
@@ -317,34 +321,34 @@ hr {
 .enabled_chat p {
   color: #bbb;
 }
-.enabled_chat i{
+.enabled_chat i {
   margin-right: 13px;
-  color: #FFB230;
+  color: #ffb230;
 }
 .disabled_chat {
   box-shadow: 1px 1px 3px 0px #bbb;
   border: 2px solid #bbb;
-  color: #F8BFBC;
-  transition: transform .2s, border .2s, font-size .2s;
+  color: #f8bfbc;
+  transition: transform 0.2s, border 0.2s, font-size 0.2s;
 }
 .disabled_chat:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 3px 0px #F8BFBC;
-  border: 2px solid #F8BFBC;
+  box-shadow: 1px 1px 3px 0px #f8bfbc;
+  border: 2px solid #f8bfbc;
   font-size: 1em;
   transform: scale(1.02);
 }
 .disabled_chat p {
   color: #bbb;
 }
-.disabled_chat i{
+.disabled_chat i {
   margin-right: 13px;
-  color: #F8836C;
+  color: #f8836c;
 }
 #img_chatbot_cont {
   text-align: center;
 }
-#img-chatbot{
+#img-chatbot {
   max-width: 100%;
   height: 400px;
   margin: 5px 0;
@@ -398,7 +402,7 @@ hr {
   transform-origin: left center;
   padding: 10px 15px;
   position: absolute;
-  margin-top: -40px;  
+  margin-top: -40px;
 }
 #form-cadastro .question textarea {
   border: 2px solid #ccc;
@@ -448,7 +452,7 @@ hr {
   -ms-transform: translate(0, -80px);
   -webkit-transform: translate(0, -80px);
   transform: translate(0, -80px);
-  font-size: 1.8em;  
+  font-size: 1.8em;
 }
 #form-cadastro .question input:valid ~ label {
   text-transform: uppercase;
@@ -494,6 +498,25 @@ hr {
   border-radius: 60px;
   font-size: 1.1em;
   font-weight: 400;
+}
+.modal-button {
+  display: block;
+  padding: 10px 20px;
+  margin: 35px auto;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 60px;
+  font-size: 1.1em;
+  font-weight: 400;
+  transform: translate(-9px, -69px);
+}
+.modal-button button:hover {
+  color: #222222;
+  font-weight: 700;
+  border: 1px solid #f5a128;
+  background-color: #f5a128;
+  cursor: pointer;
 }
 /* FIM CADASTRO */
 
@@ -541,7 +564,7 @@ hr {
   -o-transition: max-height 1s;
   transition: max-height 1s;
 }
-.tab-content a{
+.tab-content a {
   text-decoration: underline;
   color: #222222;
 }
@@ -563,6 +586,16 @@ hr {
   width: 2em;
   height: 3em;
 }
+
+.modal-form {
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+
+  height: 77px;
+  width: 498px;
+  margin-top: -3px;
+  margin-left: 1px;
+}
 /* MEDIA QUERIES */
 /* DISPLAYS SCREENS */
 
@@ -571,7 +604,7 @@ hr {
     margin: 40px auto;
   }
 }
-@media only screen and (min-width: 764px) {
+@media only screen and (min-width: 763px) {
   .menu_item {
     width: 250px;
   }
@@ -633,7 +666,7 @@ hr {
     width: 60%;
     margin: auto 20%;
   }
-  #img-chatbot{
+  #img-chatbot {
     height: 400px;
   }
 }
